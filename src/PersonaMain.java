@@ -10,8 +10,7 @@ con DNI … es / no es mayor de edad”.*/
 
         Persona person = new Persona();
         Persona person1 = new Persona();
-
-        boolean mayor = false;
+        //boolean mayor = false;
 
         System.out.println("Escribe tu nombre: ");
         person.nombre = teclado.nextLine();
@@ -22,9 +21,10 @@ con DNI … es / no es mayor de edad”.*/
         System.out.println("Introduce tu DNI: ");
         person.dni = teclado.nextLine();
 
-
         System.out.println("Introduce la edad: ");
         person.edad = teclado.nextInt();
+        teclado.nextLine();
+
 
         System.out.println("Nombre de la segunda persona: ");
         person1.nombre = teclado.nextLine();
@@ -39,19 +39,21 @@ con DNI … es / no es mayor de edad”.*/
         person1.edad = teclado.nextInt();
 
         if(person.edad >= 18)
-            mayor = true;
+            person.mayor = true;
 
         if(person1.edad >= 18)
-            mayor = true;
+            person.mayor = true;
 
 
-        if (mayor){
-            System.out.println(person.nombre+" "+person.apellidos+" con "+person.dni+" es mayor de edad.");
-            System.out.println(person1.nombre+" "+person1.apellidos+" con "+person1.dni+" es mayor de edad.");
+        if (person.mayor){
+            System.out.println(person.nombre+" "+person.apellidos+" con DNI "+person.dni+" es mayor de edad.");
         }else {
             System.out.println(person.nombre+" "+person.apellidos+" con "+person.dni+" no es mayor de edad.");
-            System.out.println(person1.nombre+" "+person1.apellidos+" con "+person1.dni+" no es mayor de edad.");
         }
-
+        if(person1.mayor) {
+            System.out.println(person1.nombre + " " + person1.apellidos + " con DNI " + person1.dni + " es mayor de edad.");
+        }else {
+            System.out.println(person1.nombre + " " + person1.apellidos + " con " + person1.dni + " no es mayor de edad.");
+        }
     }
 }

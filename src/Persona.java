@@ -6,5 +6,5 @@ de una persona: dni, nombre, apellidos y edad.*/
     String nombre;
     String apellidos;
     int edad;
-
+    boolean mayor;
 }
