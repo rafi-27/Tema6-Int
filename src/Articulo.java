@@ -1,7 +1,7 @@
 class Articulo {
     String nombre;
     int precio;
-    double iva = 21;
+    final double iva = 21.00;
 
     int cuantosQuedan;
 

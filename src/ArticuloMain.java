@@ -7,10 +7,11 @@ public class ArticuloMain {
 
         producto.nombre = "Zapatilla";
         producto.precio = 10;
-        producto.iva = (producto.precio*21.0)/100;
-
+        //producto.iva = (producto.precio*21.0)/100;
+    double inin = ((producto.precio * producto.iva)/100)+ producto.precio;
         System.out.println(producto.nombre+" - "+" Precio: "+producto.precio+"€"+" - "+" IVA: 21%"+" - "+" PVP: "+(producto.iva+ producto.precio)+"€");
 
-        System.out.println(producto.nombre+" Precio: "+producto.precio+"€"+" IVA: 21%"+" PVP: "+(((producto.precio*21.0)/100)+ producto.precio)+"€");
+        System.out.println(producto.nombre+" Precio: "+producto.precio+"€"+" IVA: 21%"+" PVP: "+(((producto.precio* producto.iva)/100)+ producto.precio)+"€");
+        System.out.println(inin);
     }
 }
