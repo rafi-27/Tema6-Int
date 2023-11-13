@@ -1,3 +1,5 @@
+package EjerciciosDeEjemplos;
+
 import javax.swing.*;
 
 public class Operacion {

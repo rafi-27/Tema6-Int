@@ -1,3 +1,5 @@
+package EjerciciosDeEjemplos;
+
 class PersonaPrueba {
     private String Nombre;
     private String Apellidos;

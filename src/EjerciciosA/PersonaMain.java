@@ -1,9 +1,11 @@
+package EjerciciosA;
+
 import java.util.Scanner;
 
 public class PersonaMain {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-    /*En el main de la clase principal instancia dos objetos de la clase Persona. Luego, pide por
+    /*En el main de la clase principal instancia dos objetos de la clase EjerciciosA.Persona. Luego, pide por
 teclado los datos de ambas personas (guárdalos en los objetos). Por último, imprime dos
 mensajes por pantalla (uno por objeto) con un mensaje del estilo “Azucena Luján García
 con DNI … es / no es mayor de edad”.*/

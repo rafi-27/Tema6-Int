@@ -1,3 +1,5 @@
+package EjerciciosA;
+
 class Rectangulo {
     int x1;
     int y1;

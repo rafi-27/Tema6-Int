@@ -1,4 +1,4 @@
-import javax.swing.*;
+package EjerciciosDeEjemplos;
 
 public class OperacionMain {
     public static void main(String[] args) {

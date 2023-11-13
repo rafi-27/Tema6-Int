@@ -1,8 +1,10 @@
+package EjerciciosDeEjemplos;
+
 import java.util.Scanner;
 public class PersonaMainPrueba {
     public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);
-        Persona ejemploUno = new Persona();
+        PersonaPrueba ejemploUno = new PersonaPrueba();
 
         ejemploUno.setNombre("");
         ejemploUno.setApellidos("");

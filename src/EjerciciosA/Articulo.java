@@ -1,3 +1,5 @@
+package EjerciciosA;
+
 class Articulo {
     String nombre;
     int precio;

@@ -1,3 +1,5 @@
+package EjerciciosA;
+
 import java.util.Scanner;
 
 public class ArticuloMain {
