@@ -3,7 +3,7 @@ package EjerciciosB;
 public class RectanguloBMain {
     public static void main(String[] args) {
 
-        RectanguloB rectanguloUno = new RectanguloB(1,2,5,5);
+        RectanguloB rectanguloUno = new RectanguloB(10,10,-3,7);
         RectanguloB rectanguloDos = new RectanguloB(1,1,2,5);
 
         System.out.println("Coordenadas 1: "+"("+"x:"+rectanguloUno.x1+","+"y:"+rectanguloUno.y1+")"+" "+"("+"x:"+rectanguloUno.x2+","+"y:"+rectanguloUno.y2+")");
