@@ -5,13 +5,7 @@ public class ArticuloBMain {
 
         ArticuloB prodctoUno = new ArticuloB("Nike",15,9,20);
 
-        System.out.println(prodctoUno);
-
-
-
-
-
-
+        System.out.println();
 
 
     }
