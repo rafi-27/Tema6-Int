@@ -41,6 +41,5 @@ class ArticuloB {
             System.err.println("Error el porcentaje de iva es del 21 siempre.");
             iva = 21;
         }
-
     }
 }
