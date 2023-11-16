@@ -49,14 +49,16 @@ class RectanguloC {
     }
 
     public void setX2(int dosx){
-        this.x2=dosx;
+        if(dosx < x1){
+            System.err.println("Dato introducido incorrecto");
+        }else this.x2=dosx;
     }
     public void setY1(int yeuno){
         this.y1=yeuno;
     }
     public void setY2(int yedos){
-        this.y2=yedos;
+        if(yedos < x1){
+            System.err.println("Dato introducido incorrecto");
+        }else this.y2=yedos;
     }
-
-
 }
