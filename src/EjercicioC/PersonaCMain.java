@@ -32,6 +32,5 @@ public class PersonaCMain {
 
         System.out.println(antoni.getNombre()+" con apellido "+antoni.getApellidos()+" con dni "+antoni.getDni()+" de edad "+antoni.getEdad()+antoni.getMayor());
         System.out.println(rafi.getNombre()+" con apellido "+rafi.getApellidos()+" con dni "+rafi.getDni()+" de edad "+rafi.getEdad()+rafi.getMayor());
-
     }
 }
