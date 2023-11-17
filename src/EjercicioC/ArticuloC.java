@@ -59,6 +59,9 @@ class ArticuloC {
     }
 
     public void setPrecio(double price){
+        if(price < 0){
+            System.err.println("La cantidad de dinero es negativa.");
+        }
         this.precio=price;
     }
 
