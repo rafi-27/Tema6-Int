@@ -19,11 +19,9 @@ public class PuntoDMain {
         puntoUno.desplaza(1,1);
         puntoUno.imprime();
         //Calculamos la distancia:
-        puntoUno.setXY(5,5);
+        puntoUno.setXY(5,4);
         puntoDos.setXY(2,6);
         System.out.println("Calculamos la distancia: "+puntoUno.distancia(puntoDos));
-
-
 
     }
 }
