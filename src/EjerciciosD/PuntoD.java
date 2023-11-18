@@ -46,6 +46,4 @@ class PuntoD {
     public int distancia(PuntoD numer){
         return (int)Math.sqrt(Math.pow(numer.x-this.x,2)+(Math.pow(numer.y-this.y,2)));
     }
-
-
 }
