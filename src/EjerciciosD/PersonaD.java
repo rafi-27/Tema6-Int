@@ -62,6 +62,4 @@ class PersonaD {
     public int diferenciaEdad(PersonaD persona){
         return (int)(this.edad-persona.getEdad());
     }
-
-
 }

@@ -3,7 +3,7 @@ package EjerciciosD;
 public class PersonaDMain {
     public static void main(String[] args) {
 
-    PersonaD pedro = new PersonaD("Pedro","Sanchez","5478742P",45);
+    PersonaD pedro = new PersonaD("Pedro","Sanchez","5478742P",17);
     PersonaD juan = new PersonaD("Juan","Perez","1234578Ñ",19);
 
     pedro.imprime();
