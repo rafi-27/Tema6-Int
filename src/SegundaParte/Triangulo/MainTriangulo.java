@@ -1,7 +1,5 @@
 package SegundaParte.Triangulo;
 
-import SegundaParte.Triangulo.ClaseTriangulo;
-
 public class MainTriangulo {
     public static void main(String[] args) {
 
