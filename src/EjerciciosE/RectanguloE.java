@@ -3,16 +3,18 @@ package EjerciciosE;
 import java.util.concurrent.ThreadLocalRandom;
 
 class RectanguloE {
-    private int x1;
-    private int y1;
-    private int x2;
-    private int y2;
-    static final int min = 0 ;
-    static int max = 100;
+    private static int x1;
+    private static int y1;
+    private static int x2;
+    private static int y2;
+//    static final int min = 0 ;
+//    static int max = 100;
 
+    public static final int min=0;
+    public static final int max=100;
 
     public RectanguloE(int x1, int x2, int y1, int y2) {
-        if (x1 >= x2 && y1 >= y2) {
+        if (x1 >= x2 && y1 >= y2 && x1 < min && y1 > max && x2 < min && y2 > max) {
             System.err.println("Error al instanciar el objeto.");
         } else {
             this.x1 = x1;
@@ -119,13 +121,30 @@ class RectanguloE {
     }
 
     //Metodo para generar un Rectangulo aleatorio
-
+    //Corregir para que imprima los datos correctamente.
     public static RectanguloE crearRectangulo(){
-        int x1= ThreadLocalRandom.current().nextInt(0,101);
-        int y1= ThreadLocalRandom.current().nextInt(0,101);
-        int x2= ThreadLocalRandom.current().nextInt(0,101);
-        int y2= ThreadLocalRandom.current().nextInt(0,101);
-        return new RectanguloE(x1,x2,y1,y2);
-    }
+        int x1=0,x2=0,y1=0,y2=0;
+        x1= ThreadLocalRandom.current().nextInt(min,max);
+        x2= ThreadLocalRandom.current().nextInt(x1+1,max);
+        y1 = ThreadLocalRandom.current().nextInt(min,max);
+        y2 = ThreadLocalRandom.current().nextInt(y1+1,max);
 
+
+//        while (x1>x2 && y1>y2);{
+//            x1=ThreadLocalRandom.current().nextInt(min,max+1);
+//            x2=ThreadLocalRandom.current().nextInt(min,max+1);
+//            y1 = ThreadLocalRandom.current().nextInt(min,max+1);
+//            y2 = ThreadLocalRandom.current().nextInt(min,max+1);
+//        }
+
+//        int y1 = ThreadLocalRandom.current().nextInt(min,max);
+//        int y2 = ThreadLocalRandom.current().nextInt(y1+1,max+1);
+//
+//        int x1= ThreadLocalRandom.current().nextInt(0,101);
+//        int y1= ThreadLocalRandom.current().nextInt(0,101);
+//
+//        int x2= ThreadLocalRandom.current().nextInt(0,101);
+//        int y2= ThreadLocalRandom.current().nextInt(0,101);
+        return new RectanguloE(x1,y1,x2,y2);
+    }
 }
