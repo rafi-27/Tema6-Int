@@ -8,11 +8,32 @@ class AparatosCon {
  * plancha, y el programa imprime el consumo. Luego se apaga la plancha y se enciende el
  * radiador y se vuelve imprimir el consumo.
  */
+String nombre;
+int potencia;
+boolean encendido;
 
-static final int bombilla = 100;
-static final int radiador = 2000;
-static final int plancha = 1200;
+public AparatosCon(String nameAparato, int consum){
+    this.nombre=nameAparato;
+    this.potencia=consum;
+    this.encendido=false;
+}
 
+public void encender(){
+    if(!encendido){
+        encendido = true;
+        System.out.println(nombre+" tiene un consumo de "+potencia+" watios.");
+    }else {
+        System.out.println(nombre+" ya esta encendio.");
+    }
+}
 
+public void apagar(){
+    if(encendido){
+        encendido = false;
+        potencia=0;
+        System.out.println(nombre+" la acabas de apagar ahora tiene un consumo de "+potencia+" watios");
+    }else System.out.println(nombre+" esta apagado/a.");
+
+}
 
 }
