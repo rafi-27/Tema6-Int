@@ -15,5 +15,8 @@ PuntoTriangulo puntoUno,puntoDos,puntoTres;
         this.puntoTres=puntoTres;
     }
 
+    public void imprimir(){
+        System.out.println("Coordenadas: "+"("+puntoUno.getX()+","+puntoUno.getY()+")"+"("+puntoDos.getX()+","+puntoDos.getY()+")"+"("+puntoTres.getX()+","+puntoTres.getY()+")");
+    }
 
 }
