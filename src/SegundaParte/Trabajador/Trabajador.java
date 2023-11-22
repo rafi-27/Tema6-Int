@@ -2,19 +2,19 @@ package SegundaParte.Trabajador;
 
 class Trabajador {
 //Importe de la hora extra (double), será un atributo de clase
-    static double horasExtras;
+    private static double horasExtras;
 //Número de trabajadores (int), será un atributo de clase
-    static int totaltrabajadores;
+    private static int totaltrabajadores;
 //DNI (String)
-    String DNI;
+    private String DNI;
 //Nombre (String)
-    String nombre;
+    private String nombre;
 //Sueldo base (double)
-    double sueldoBase;
+    private double sueldoBase;
 //Horas extras realizadas en el mes (int)
-    int horasExtrasMes;
+    private int horasExtrasMes;
 //Tipo de IRPF (%) (double)
-    double IRPF;
+    private double IRPF;
 //Creamos el constructor por defecto.
     public Trabajador(String name,String dni, double sueldobase, int horasExEchadasMes,double tipoIRPF){
         this.nombre=name;
