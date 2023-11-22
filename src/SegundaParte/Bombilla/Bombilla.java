@@ -2,50 +2,37 @@ package SegundaParte.Bombilla;
 
 class Bombilla {
 
-boolean interruptorBombilla;
-boolean interruptorGeneral;
+    private boolean interruptorBombilla;
+    static boolean interruptorGeneral;
 
-String lugar;
+    String lugar;
 
-public void encenderBombilla(String lugarCasa){
-    this.lugar=lugarCasa;
-    interruptorBombilla=false;
-    interruptorGeneral=false;
-}
-//Un método para cambiar el estado del interruptor de al bombilla.
-//Encendemos bombilla.
-    public void encenderBombilla(){
-    if(!interruptorBombilla){
-        interruptorBombilla=true;
-        System.out.println(lugar+ " se acaba de encender.");
-    }else System.out.println("Ya estaba encendida");
-}
-//Apagamos la bombilla.
-    public void apagarBombilla(){
-    if (interruptorBombilla){
-        interruptorBombilla=false;
-        System.out.println("Acabas de apagar la bombilla de "+lugar);
-        }else System.out.println("Ya estaba apagada.");
+    public Bombilla(String lugarCasa, boolean encendemosBombilla) {
+        this.lugar = lugarCasa;
+        this.interruptorBombilla = encendemosBombilla;
     }
-//Un método para cambiar el estado del interruptor general de la casa.
-    public void encendidoGeneral(){
-        if(!interruptorGeneral){
-            interruptorGeneral=true;
+
+    //Un método para cambiar el estado del interruptor de al bombilla.
+    public void setestadoBombilla(boolean encender) {
+        if (encender) {
+            interruptorBombilla = true;
+            System.out.println(lugar + " se acaba de encender.");
+        }
+        else{
+            interruptorBombilla = false;
+            System.out.println("Acabas de apagar la bombilla de " + lugar);
         }
     }
 
-    public void apagadoGeneral(){
-    if(interruptorGeneral){
-        interruptorGeneral=false;
-    }
-    }
+    //Apagamos la bombilla.
 
-//Un método que determina si una bombilla esta luciendo o no.
-    public void imprimeEncendido(){
-        if(interruptorBombilla == true){
-            System.out.println(lugar+" bombilla ON.");
-        }else System.out.println(lugar+" bombilla OFF.");
-    }
+    //Un método para cambiar el estado del interruptor general de la casa.
 
+    //Un método que determina si una bombilla está luciendo o no.
+    public void imprimeEncendido() {
+        if (interruptorBombilla && interruptorGeneral) {
+            System.out.println(lugar + " bombilla ON.");
+        } else System.out.println(lugar + " bombilla OFF.");
+    }
 
 }

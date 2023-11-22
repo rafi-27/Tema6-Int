@@ -7,13 +7,12 @@ public class TotalConsumo {
         AparatosCon radiador = new AparatosCon("Radiador",2000);
         AparatosCon plancha = new AparatosCon("Plancha",1200);
 
-//        bombilla.encender();
-//        radiador.encender();
-//        radiador.apagar();
-//        plancha.apagar();
-//        radiador.apagar();
-
-        bombilla.encender();
-        bombilla.encender();
+        bombilla.encenderOapagar();
+        radiador.encenderOapagar();
+        plancha.encenderOapagar();
+        radiador.encenderOapagar();
+        plancha.encenderOapagar();
+        bombilla.encenderOapagar();
+        //AparatosCon.imprimirConsumo();
     }
 }

@@ -22,9 +22,7 @@ PuntoTriangulo puntoUno,puntoDos,puntoTres;
     }
 
     public void imprimir(){
-<<<<<<< HEAD
         System.out.println("Coordenadas: "+"("+puntoUno.getX()+","+puntoUno.getY()+")"+"("+puntoDos.getX()+","+puntoDos.getY()+")"+"("+puntoTres.getX()+","+puntoTres.getY()+")");
-=======
         System.out.println("Vértrices: "+"("+puntoUno.getX()+","+puntoUno.getY()+")"+" "+"("+puntoDos.getX()+","+puntoDos.getY()+")"+" "+"("+puntoTres.getX()+","+puntoTres.getY()+")");
     }
 
@@ -36,7 +34,9 @@ PuntoTriangulo puntoUno,puntoDos,puntoTres;
         int ladoTres = (int)Math.sqrt(Math.pow((puntoTres.getX()-puntoUno.getX()),2)+Math.pow((puntoTres.getY()-puntoUno.getY()),2));
         int perimetro = ladoUno+ladoDos+ladoTres;
         return perimetro;
->>>>>>> d661984f299cd67c969ba8de1fe461eeeb92f975
     }
 
+    public int calculoDos(){
+        return puntoUno.distancia(puntoDos)+puntoDos.distancia(puntoTres)+puntoTres.distancia(puntoUno);
+    }
 }

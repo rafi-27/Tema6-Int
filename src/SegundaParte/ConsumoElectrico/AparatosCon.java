@@ -11,6 +11,7 @@ class AparatosCon {
 String nombre;
 int potencia;
 boolean encendido;
+static int consumoTotal=0;
 
 public AparatosCon(String nameAparato, int consum){
     this.nombre=nameAparato;
@@ -18,22 +19,20 @@ public AparatosCon(String nameAparato, int consum){
     this.encendido=false;
 }
 
-public void encender(){
+public void encenderOapagar(){
     if(!encendido){
         encendido = true;
-        System.out.println(nombre+" tiene un consumo de "+potencia+" watios.");
+        this.consumoTotal=consumoTotal+potencia;
     }else {
-        System.out.println(nombre+" ya esta encendio.");
+        encendido = false;
+        consumoTotal=consumoTotal-potencia;
+        System.out.println(nombre+", se acaba de apagar.");
     }
+    imprimirConsumo();
 }
 
-public void apagar(){
-    if(encendido){
-        encendido = false;
-        potencia=0;
-        System.out.println(nombre+" la acabas de apagar ahora tiene un consumo de "+potencia+" watios");
-    }else System.out.println(nombre+" esta apagado/a.");
-
+public static void imprimirConsumo(){
+    System.out.println("Tenemos un consumo total de: "+consumoTotal);
 }
 
 }

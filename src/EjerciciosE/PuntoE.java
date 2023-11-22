@@ -47,8 +47,8 @@ class PuntoE {
     }
     //Creamos el metodo para calcular la distancia.
     public int distancia(PuntoE numer){
-        //return (int)Math.sqrt(Math.pow((numer.getX()-this.x),2)+(Math.pow((numer.getY()-this.y),2)));
-        return (int)Math.sqrt(((numer.getX()-this.x)^2)+((numer.getY()-this.y)^2));
+        return (int)Math.sqrt(Math.pow((numer.getX()-this.x),2)+(Math.pow((numer.getY()-this.y),2)));
+        //return (int)Math.sqrt(((numer.getX()-this.x)^2)+((numer.getY()-this.y)^2));
 
     }
 
