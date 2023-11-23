@@ -22,7 +22,13 @@ PuntoTriangulo puntoUno,puntoDos,puntoTres;
     }
 
     public void imprimir(){
+<<<<<<< HEAD
         System.out.println("Coordenadas: "+"("+puntoUno.getX()+","+puntoUno.getY()+")"+"("+puntoDos.getX()+","+puntoDos.getY()+")"+"("+puntoTres.getX()+","+puntoTres.getY()+")");
+=======
+
+        System.out.println("Coordenadas: "+"("+puntoUno.getX()+","+puntoUno.getY()+")"+"("+puntoDos.getX()+","+puntoDos.getY()+")"+"("+puntoTres.getX()+","+puntoTres.getY()+")");
+
+>>>>>>> e93a4e469baedbc034ce57fa9922751755e165b4
         System.out.println("Vértrices: "+"("+puntoUno.getX()+","+puntoUno.getY()+")"+" "+"("+puntoDos.getX()+","+puntoDos.getY()+")"+" "+"("+puntoTres.getX()+","+puntoTres.getY()+")");
     }
 
