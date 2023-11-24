@@ -15,13 +15,18 @@ class Trabajador {
     private int horasExtrasMes;
 //Tipo de IRPF (%) (double)
     private double IRPF;
+//Precio por hora y hora extra.
+    private int precioHora, precioHoraExtra;
+
 //Creamos el constructor por defecto.
-    public Trabajador(String name,String dni, double sueldobase, int horasExEchadasMes,double tipoIRPF){
+    public Trabajador(String name,String dni, double sueldobase, int horasExEchadasMes,double tipoIRPF,int preciohour, int precioHourExtra){
         this.nombre=name;
         this.DNI=dni;
         this.sueldoBase=sueldobase;
         this.horasExtrasMes=horasExEchadasMes;
         this.IRPF=tipoIRPF;
+        this.precioHora=preciohour;
+        this.precioHoraExtra=precioHourExtra;
     }
 
 //Metodos getters
@@ -51,6 +56,13 @@ class Trabajador {
 
     public double getIRPF() {
         return IRPF;
+    }
+
+    public int getPrecioHora(){
+        return precioHora;
+    }
+    public int getPrecioHoraExtra(){
+        return precioHoraExtra;
     }
 //Creamos los metodos setters.
 
@@ -82,13 +94,20 @@ class Trabajador {
     public void setIRPF(double IRPF) {
         this.IRPF = IRPF;
     }
+//Setter doble para precio de la hora y hora extra.
+    public void setPreciosHoras(int hora,int extra){
+        this.precioHora=hora;
+        this.horasExtrasMes=extra;
+    }
 
 //Creamos los metodos pedidos en el ejercicio.
-//    public int calcularImporteHorasExtras(){
-//
-//    }
+    public double calcularImporteHorasExtras(){
+        return precioHoraExtra*horasExtrasMes;
+    }
 
-
+    public double calcularSueldoBruto(){
+        return sueldoBase+calcularImporteHorasExtras();
+    }
 
 
 
