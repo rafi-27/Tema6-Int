@@ -109,12 +109,16 @@ class Trabajador {
         return sueldoBase+calcularImporteHorasExtras();
     }
 
+    public double  calcularRetencionIrpf(){
+        return ((IRPF*sueldoBase)/100);
+    }
 
+    public double calcularSueldo(){
+        return (calcularSueldoBruto()-calcularRetencionIrpf());
+    }
 
-
-
-
-
-
-
+    @Override
+    public String toString() {
+        return this.DNI+" "+this.nombre+"/n"+"Sueldo Base: "+sueldoBase+"/n"+"Horas Extras: "+this.horasExtrasMes+"/n"+"Tipo de IRPF: "+this.IRPF+"/n"+"Sueldo Bruto: "+calcularSueldoBruto()+"/n"+"Retencion por IRPF: "+calcularRetencionIrpf()+"/n"+"Sueldo Neto: "+calcularSueldo();
+    }
 }
