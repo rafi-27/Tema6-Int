@@ -1,4 +1,4 @@
-package EjercicioC;
+package EjerciciosC;
 
 class PersonaC {
     private String dni;

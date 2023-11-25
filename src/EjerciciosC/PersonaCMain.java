@@ -1,4 +1,4 @@
-package EjercicioC;
+package EjerciciosC;
 
 public class PersonaCMain {
     public static void main(String[] args) {

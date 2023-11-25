@@ -1,4 +1,4 @@
-package EjercicioC;
+package EjerciciosC;
 
 class ArticuloC {
     private String nombre;

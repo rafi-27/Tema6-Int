@@ -1,6 +1,4 @@
-package EjercicioC;
-
-import EjerciciosB.PuntoBMain;
+package EjerciciosC;
 
 class RectanguloC {
 

@@ -1,4 +1,4 @@
-package EjercicioC;
+package EjerciciosC;
 
 public class PuntoCMain {
     public static void main(String[] args) {
