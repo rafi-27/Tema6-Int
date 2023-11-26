@@ -1,5 +1,7 @@
 package SegundaParte.Trabajador;
 
+import java.util.Scanner;
+
 class Trabajador {
 //Importe de la hora extra (double), será un atributo de clase
     private static double horasExtras;
@@ -19,15 +21,13 @@ class Trabajador {
     private int precioHora, precioHoraExtra;
 
 //Creamos el constructor por defecto.
-    public Trabajador(String name,String dni, double sueldobase, int horasExEchadasMes,double tipoIRPF,int preciohour, int precioHourExtra){
-        this.nombre=name;
-        this.DNI=dni;
-        this.sueldoBase=sueldobase;
-        this.horasExtrasMes=horasExEchadasMes;
-        this.IRPF=tipoIRPF;
-        this.precioHora=preciohour;
-        this.precioHoraExtra=precioHourExtra;
-    }
+//    public Trabajador(String name,String dni, double sueldobase, int horasExEchadasMes,double tipoIRPF){
+//        this.nombre=name;
+//        this.DNI=dni;
+//        this.sueldoBase=sueldobase;
+//        this.horasExtrasMes=horasExEchadasMes;
+//        this.IRPF=tipoIRPF;
+//    }
 
 //Metodos getters
     public String getNombre() {
@@ -119,6 +119,31 @@ class Trabajador {
 
     @Override
     public String toString() {
-        return this.DNI+" "+this.nombre+"/n"+"Sueldo Base: "+sueldoBase+"/n"+"Horas Extras: "+this.horasExtrasMes+"/n"+"Tipo de IRPF: "+this.IRPF+"/n"+"Sueldo Bruto: "+calcularSueldoBruto()+"/n"+"Retencion por IRPF: "+calcularRetencionIrpf()+"/n"+"Sueldo Neto: "+calcularSueldo();
+        return this.DNI+" "+this.nombre+"\nSueldo Base: "+sueldoBase+"\nHoras Extras: "+this.horasExtrasMes+"\nTipo de IRPF: "+this.IRPF+"\nSueldo Bruto: "+calcularSueldoBruto()+"\nRetencion por IRPF: "+calcularRetencionIrpf()+"\nSueldo Neto: "+calcularSueldo();
     }
+
+    public static void leerTrabajador(Trabajador nuevoEmpleado){
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Nombre: ");
+        nuevoEmpleado.nombre = teclado.next();
+
+        teclado.nextLine();
+
+        System.out.println("DNI: ");
+        nuevoEmpleado.DNI = teclado.next();
+
+        System.out.println("Sueldo Base: ");
+        nuevoEmpleado.sueldoBase = teclado.nextDouble();
+
+        System.out.println("Horas Extras: ");
+        nuevoEmpleado.horasExtrasMes = teclado.nextInt();
+
+        System.out.println("Tipod IRPF: ");
+        nuevoEmpleado.IRPF = teclado.nextDouble();
+
+        totaltrabajadores = totaltrabajadores + 1;
+        System.out.println();
+    }
+
 }
