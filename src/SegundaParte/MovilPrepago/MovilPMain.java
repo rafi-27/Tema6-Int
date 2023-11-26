@@ -11,5 +11,7 @@ public class MovilPMain {
         telefonoVodafone.navegar(250);
         System.out.println(telefonoVodafone.consultarSaldo());
 
+        telefonoVodafone.recargar(10);
+        System.out.println(telefonoVodafone.consultarSaldo());
     }
 }
