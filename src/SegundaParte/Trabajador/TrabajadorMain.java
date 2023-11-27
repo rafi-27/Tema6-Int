@@ -1,7 +1,11 @@
 package SegundaParte.Trabajador;
 
+import java.util.Scanner;
+
 public class TrabajadorMain {
     public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
         //Trabajador joseluis = new Trabajador("Jose Luis","54878412O",1800,7,15.0);
 
         //System.out.println(joseluis.getNombre()+" "+joseluis.getDNI()+" con un sueldo base de "+joseluis.getSueldoBase()+" echando "+joseluis.getHorasExtrasMes()+" horas  extras"+" de un IRPF del "+joseluis.getIRPF()+".")
@@ -9,7 +13,8 @@ public class TrabajadorMain {
         //System.out.println(rafik.toString());
 
         //Probando
-        Trabajador.setHorasExtras(8);
+
+        System.out.print("Precio de la hora extra: ");Trabajador.setPrecioHorasExtras(teclado.nextDouble());
 
         Trabajador rafik = new Trabajador();
         Trabajador.leerTrabajador(rafik);

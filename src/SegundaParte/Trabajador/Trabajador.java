@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 class Trabajador {
 //Importe de la hora extra (double), será un atributo de clase
-    private static double horasExtras;
+    private static double PreciohorasExtras;
 //Número de trabajadores (int), será un atributo de clase
     private static int totaltrabajadores;
 //DNI (String)
@@ -21,21 +21,19 @@ class Trabajador {
     private int precioHora, precioHoraExtra;
 
 //Creamos el constructor por defecto.
-//    public Trabajador(String name,String dni, double sueldobase, int horasExEchadasMes,double tipoIRPF){
-//        this.nombre=name;
-//        this.DNI=dni;
-//        this.sueldoBase=sueldobase;
-//        this.horasExtrasMes=horasExEchadasMes;
-//        this.IRPF=tipoIRPF;
-//    }
+    public Trabajador(){Trabajador.totaltrabajadores+=1;};
+    public Trabajador(String name,String dni, double sueldobase, int horasExEchadasMes,double tipoIRPF){
+        this.nombre=name;
+        this.DNI=dni;
+        this.sueldoBase=sueldobase;
+        this.horasExtrasMes=horasExEchadasMes;
+        this.IRPF=tipoIRPF;
+        Trabajador.totaltrabajadores+=1;
+    }
 
 //Metodos getters
     public String getNombre() {
         return nombre;
-    }
-
-    public static double getHorasExtras() {
-        return horasExtras;
     }
 
     public static int getTotaltrabajadores() {
@@ -67,8 +65,8 @@ class Trabajador {
 //Creamos los metodos setters.
 
 
-    public static void setHorasExtras(double horasExtras) {
-        Trabajador.horasExtras = horasExtras;
+    public static void setPrecioHorasExtras(double PreciohorasExtras) {
+        Trabajador.PreciohorasExtras = PreciohorasExtras;
     }
 
     public static void setTotaltrabajadores(int totaltrabajadores) {
@@ -101,8 +99,9 @@ class Trabajador {
     }
 
 //Creamos los metodos pedidos en el ejercicio.
+    //Metodo para calcular los se va a cobrar por las horas extra
     public double calcularImporteHorasExtras(){
-        return precioHoraExtra*horasExtrasMes;
+        return this.PreciohorasExtras*horasExtrasMes;
     }
 
     public double calcularSueldoBruto(){
@@ -144,6 +143,7 @@ class Trabajador {
 
         totaltrabajadores = totaltrabajadores + 1;
         System.out.println();
-    }
 
+        Trabajador.totaltrabajadores+=1;
+    }
 }
