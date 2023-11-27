@@ -98,5 +98,7 @@ public class MovilPrepagoClass {
 
     public float consultarSaldo (){
         return (float) (Math.round(this.saldo*Math.pow(10,2))/Math.pow(10,2));
+//        DecimalFormat formato = new DecimalFormat("#,00");
+//        return formato.format(this.saldo);
     }
 }
