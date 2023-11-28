@@ -21,14 +21,14 @@ class Trabajador {
     private int precioHora, precioHoraExtra;
 
 //Creamos el constructor por defecto.
-    public Trabajador(){Trabajador.totaltrabajadores+=1;};
+    public Trabajador(){totaltrabajadores=totaltrabajadores+1;};
     public Trabajador(String name,String dni, double sueldobase, int horasExEchadasMes,double tipoIRPF){
         this.nombre=name;
         this.DNI=dni;
         this.sueldoBase=sueldobase;
         this.horasExtrasMes=horasExEchadasMes;
         this.IRPF=tipoIRPF;
-        Trabajador.totaltrabajadores+=1;
+        this.totaltrabajadores+=1;
     }
 
 //Metodos getters
@@ -67,10 +67,6 @@ class Trabajador {
 
     public static void setPrecioHorasExtras(double PreciohorasExtras) {
         Trabajador.PreciohorasExtras = PreciohorasExtras;
-    }
-
-    public static void setTotaltrabajadores(int totaltrabajadores) {
-        Trabajador.totaltrabajadores = totaltrabajadores;
     }
 
     public void setDNI(String DNI) {
@@ -121,29 +117,27 @@ class Trabajador {
         return this.DNI+" "+this.nombre+"\nSueldo Base: "+sueldoBase+"\nHoras Extras: "+this.horasExtrasMes+"\nTipo de IRPF: "+this.IRPF+"\nSueldo Bruto: "+calcularSueldoBruto()+"\nRetencion por IRPF: "+calcularRetencionIrpf()+"\nSueldo Neto: "+calcularSueldo();
     }
 
-    public static void leerTrabajador(Trabajador nuevoEmpleado){
+    public void leerTrabajador(){
         Scanner teclado = new Scanner(System.in);
 
         System.out.println("Nombre: ");
-        nuevoEmpleado.nombre = teclado.next();
+        nombre = teclado.next();
 
         teclado.nextLine();
 
         System.out.println("DNI: ");
-        nuevoEmpleado.DNI = teclado.next();
+        DNI = teclado.next();
 
         System.out.println("Sueldo Base: ");
-        nuevoEmpleado.sueldoBase = teclado.nextDouble();
+        sueldoBase = teclado.nextDouble();
 
         System.out.println("Horas Extras: ");
-        nuevoEmpleado.horasExtrasMes = teclado.nextInt();
+        horasExtrasMes = teclado.nextInt();
 
         System.out.println("Tipod IRPF: ");
-        nuevoEmpleado.IRPF = teclado.nextDouble();
+        IRPF = teclado.nextDouble();
 
         totaltrabajadores = totaltrabajadores + 1;
         System.out.println();
-
-        Trabajador.totaltrabajadores+=1;
     }
 }

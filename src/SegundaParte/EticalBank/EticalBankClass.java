@@ -3,10 +3,16 @@ package SegundaParte.EticalBank;
 import java.util.Scanner;
 
 public class EticalBankClass {
-    public static void main(String[] args) {
-        CuentaBancariaClass rafi = new CuentaBancariaClass("ES12345678910111213141516171819202122","Rafik Bachri Marouf");
-        Scanner teclado = new Scanner(System.in);
-        int numero;
+//    public static void main(String[] args) {
+//        CuentaBancariaClass rafi = new CuentaBancariaClass("Rafik Bachri Marouf");
+//        Scanner teclado = new Scanner(System.in);
+
+        public static void menu(){
+            int numero=0;
+            Scanner teclado = new Scanner(System.in);
+            System.out.println("Titular: ");
+            CuentaBancariaClass cuenta = new CuentaBancariaClass("");
+            cuenta.setTitular(teclado.nextLine());
         do {
             System.out.println("1.Datos de la cuenta. Mostrará el IBAN, el titular y el saldo.");
             System.out.println("2. IBAN. Mostrará el IBAN.");
@@ -19,32 +25,33 @@ public class EticalBankClass {
             numero = teclado.nextInt();
             switch (numero){
                 case 1:
-                    System.out.println("Titular: "+ rafi.getTitular()+" numero IBAN "+rafi.getIBAN()+" saldo: "+rafi.getSaldo());
+                    System.out.println("Titular: "+cuenta.getTitular()+" numero IBAN "+cuenta.getIBAN()+" saldo: "+cuenta.getSaldo()+"€");
                     break;
                 case 2:
-                    System.out.println("IBAN: "+rafi.getIBAN());
+                    System.out.println("IBAN: "+cuenta.getIBAN());
                     break;
                 case 3:
-                    System.out.println("Titular: "+rafi.getTitular());
+                    System.out.println("Titular: "+cuenta.getTitular());
                     break;
                 case 4:
-                    System.out.println("Saldo: "+rafi.getSaldo());
+                    System.out.println("Saldo: "+cuenta.getSaldo()+"€");
                     break;
                 case 5:
                     System.out.print("Indique la cantidad a ingresar: ");
-                    rafi.ingresar(teclado.nextDouble());
+                    cuenta.ingresar(teclado.nextDouble());
                     break;
                 case 6:
                     System.out.print("Indica la cantidad a retirar: ");
-                    rafi.retirar(teclado.nextDouble());
+                    cuenta.retirar(teclado.nextDouble());
                     break;
                 case 7:
                     break;
             }
         }while (numero != 7);
-
-
-
+        }
+        public static void main(String[] args) {
+            Scanner teclado = new Scanner(System.in);
+            EticalBankClass.menu();
 
 
 

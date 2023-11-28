@@ -1,6 +1,7 @@
 package SegundaParte.EticalBank;
 
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class CuentaBancariaClass {
 //Creamos los atributos.
@@ -9,9 +10,9 @@ public class CuentaBancariaClass {
     private double saldo;
 
 //Procedo a crear el constructor.
-    public CuentaBancariaClass(String iban,String titular){
-        this.IBAN=iban;
-        this.titular=titular;
+    public CuentaBancariaClass(String titular){
+        IBAN=generarIban();
+        titular=titular;
         this.saldo=0;
     }
 //Getters
@@ -19,14 +20,14 @@ public class CuentaBancariaClass {
         return IBAN;
     }
     public String getTitular(){
-        return this.titular;
+        return titular;
     }
     public double getSaldo(){
-        return this.saldo;
+        return saldo;
     }
 //Setters
     public void setIBAN(String iban){
-        this.IBAN=iban;
+        IBAN=iban;
     }
     public void setTitular(String titular){
         this.titular=titular;
@@ -36,9 +37,15 @@ public class CuentaBancariaClass {
     }
 
 //Metodo para ingresar dinero.
+    public String generarIban(){
+        for (int i = 1; i < 23; i++) {
+            IBAN += ThreadLocalRandom.current().nextInt(0,9);
+        }
+        return "ES"+IBAN;
+    }
     public void ingresar(double cantidad){
         if(cantidad > 0){
-            this.saldo=this.saldo+cantidad;
+            saldo=saldo+cantidad;
         }else {
             System.err.println("No se puede ingresar esta cantidad de dinero.");
         }
@@ -48,12 +55,12 @@ public class CuentaBancariaClass {
     }
 //Metodo para retirar dinero.
     public void retirar(double retirada){
-        if(retirada > 0 && this.saldo - retirada >= -50){
-            this.saldo=this.saldo-retirada;
+        if(retirada > 0 && saldo - retirada >= -50){
+            saldo=saldo-retirada;
         }else {
             System.err.println("No se puede retirar dicha cantidad.");
         }
-        if(this.saldo <= -50){
+        if(saldo <= -50){
             System.err.println("AVISO: Saldo negativo");
         }
         if(retirada > 3000){
