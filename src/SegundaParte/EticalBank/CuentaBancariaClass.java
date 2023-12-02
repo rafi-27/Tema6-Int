@@ -5,14 +5,14 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class CuentaBancariaClass {
 //Creamos los atributos.
-    private String IBAN;
+    private String IBAN="ES";
     private String titular;
     private double saldo;
 
 //Procedo a crear el constructor.
     public CuentaBancariaClass(String titular){
         IBAN=generarIban();
-        titular=titular;
+        this.titular=titular;
         this.saldo=0;
     }
 //Getters
@@ -41,7 +41,7 @@ public class CuentaBancariaClass {
         for (int i = 1; i < 23; i++) {
             IBAN += ThreadLocalRandom.current().nextInt(0,9);
         }
-        return "ES"+IBAN;
+        return IBAN;
     }
     public void ingresar(double cantidad){
         if(cantidad > 0){
