@@ -23,8 +23,5 @@ public class BibliotecaMain {
         System.out.println(libroDos.toString());
         System.out.println(libroTres.toString());
         System.out.println(libroCuatro.toString());
-
-
     }
-
 }
