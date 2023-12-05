@@ -117,27 +117,26 @@ class Trabajador {
         return this.DNI+" "+this.nombre+"\nSueldo Base: "+sueldoBase+"\nHoras Extras: "+this.horasExtrasMes+"\nTipo de IRPF: "+this.IRPF+"\nSueldo Bruto: "+calcularSueldoBruto()+"\nRetencion por IRPF: "+calcularRetencionIrpf()+"\nSueldo Neto: "+calcularSueldo();
     }
 
-    public void leerTrabajador(){
+    public static void leerTrabajador(Trabajador t){
         Scanner teclado = new Scanner(System.in);
 
         System.out.println("Nombre: ");
-        nombre = teclado.next();
+        t.nombre = teclado.next();
 
         teclado.nextLine();
 
         System.out.println("DNI: ");
-        DNI = teclado.next();
+        t.DNI = teclado.next();
 
         System.out.println("Sueldo Base: ");
-        sueldoBase = teclado.nextDouble();
+        t.sueldoBase = teclado.nextDouble();
 
         System.out.println("Horas Extras: ");
-        horasExtrasMes = teclado.nextInt();
+        t.horasExtrasMes = teclado.nextInt();
 
         System.out.println("Tipod IRPF: ");
-        IRPF = teclado.nextDouble();
+        t.IRPF = teclado.nextDouble();
 
-        totaltrabajadores = totaltrabajadores + 1;
         System.out.println();
     }
 }

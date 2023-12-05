@@ -8,15 +8,15 @@ public class TrabajadorMain {
 
         //Probando
         System.out.print("Precio de la hora extra: ");Trabajador.setPrecioHorasExtras(teclado.nextDouble());
-//
-//        Trabajador rafik = new Trabajador();
-//        rafik.leerTrabajador();
-//
-//        Trabajador dani = new Trabajador();
-//        dani.leerTrabajador();
-//
+
+        Trabajador rafik = new Trabajador();
+        Trabajador.leerTrabajador(rafik);
+
+        Trabajador dani = new Trabajador();
+        Trabajador.leerTrabajador(dani);
+
         Trabajador jose = new Trabajador();
-        jose.leerTrabajador();
+        Trabajador.leerTrabajador(jose);
 
         Trabajador t1 = new Trabajador("Antoni","436455787W",2300,6,10);
 
