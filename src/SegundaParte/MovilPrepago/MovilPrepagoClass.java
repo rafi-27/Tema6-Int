@@ -4,15 +4,15 @@ import java.text.DecimalFormat;
 
 public class MovilPrepagoClass {
     //Creamos el numero movil recordamos que tiene 13 digitos.
-    private int numeroMovil;
+    protected int numeroMovil;
     //float costeEstableceLlamada (euros, con dos decimales)
-    private float costeEstableceLlamada;
+    protected float costeEstableceLlamada;
     //float costeMinutoLlamada (euros, con dos decimales)
-    private float costeMinutoLlamada;
+    protected float costeMinutoLlamada;
     //float costeConsumoMB (euros, con dos decimales)
-    private float costeConsumoMB;
+    protected float costeConsumoMB;
     //float saldo (euros, con dos decimales) nunca puede ser negativo
-    private float saldo;
+    protected float saldo;
 
     public MovilPrepagoClass(int number,float costcall, float costminutcall,float costconsumMB,float cash){
         this.numeroMovil=number;
@@ -68,7 +68,6 @@ public class MovilPrepagoClass {
         this.saldo=cash;
     }
 
-
     //Metodos a implementar:
 
     public void efectuarLlamada (int segundos){
@@ -98,7 +97,5 @@ public class MovilPrepagoClass {
 
     public float consultarSaldo (){
         return (float) (Math.round(this.saldo*Math.pow(10,2))/Math.pow(10,2));
-//        DecimalFormat formato = new DecimalFormat("#,00");
-//        return formato.format(this.saldo);
     }
 }
