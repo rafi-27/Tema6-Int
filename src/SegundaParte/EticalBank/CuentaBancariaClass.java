@@ -1,6 +1,5 @@
 package SegundaParte.EticalBank;
 
-import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class CuentaBancariaClass {

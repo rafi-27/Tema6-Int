@@ -48,16 +48,11 @@ public class EticalBankClass {
                     break;
             }
         }while (numero != 7);
+        teclado.close();
         }
         public static void main(String[] args) {
             Scanner teclado = new Scanner(System.in);
             EticalBankClass.menu();
-
-
-
-
-
-
-
-    }
+            teclado.close();
+        }
 }
